@@ -7,6 +7,9 @@ build: get
 	@echo "Building $(GOFILES) to ./bin"
 	@GOPATH=$(GOPATH) GOBIN=$(GOBIN) go build -v -o bin/$(GONAME) $(GOFILES)
 
+upgrade:
+	@GOPATH=$(GOPATH) GOBIN=$(GOBIN) go get -u
+
 get:
 	@GOPATH=$(GOPATH) GOBIN=$(GOBIN) go get -v .
 
